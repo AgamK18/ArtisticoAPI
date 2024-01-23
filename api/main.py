@@ -36,9 +36,9 @@ class Prompt(BaseModel):
     prompt_text: str
     lang: str
 
-model = MBartForConditionalGeneration.from_pretrained('../models/translator/model')
-tokenizer = MBart50TokenizerFast.from_pretrained('../models/translator/tokenizer')
-pipe = StableDiffusionPipeline.from_pretrained('../models/generator', torch_dtype=torch.float16)
+model = MBartForConditionalGeneration.from_pretrained('facebook/mbart-large-50-many-to-many-mmt')
+tokenizer = MBart50TokenizerFast.from_pretrained('facebook/mbart-large-50-many-to-many-mmt')
+pipe = StableDiffusionPipeline.from_pretrained('runwayml/stable-diffusion-v1-5', torch_dtype=torch.float16)
 pipe = pipe.to("cuda")
 
 
