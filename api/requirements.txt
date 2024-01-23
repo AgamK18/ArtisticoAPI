@@ -1,0 +1,11 @@
+transformers 
+transformers[sentencepiece] 
+sacrebleu 
+diffusers 
+accelerate
+fastapi
+uvicorn
+pydantic
+pathlib
+cloudinary
+pillow
